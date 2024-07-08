@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aroma_One_Website", "Aroma_One_Website\Aroma_One_Website.csproj", "{50F88EDA-D1F8-47A5-933E-3E1662A06181}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wwwroot", "wwwroot", "{6611B2E7-4A1F-4A60-9720-68CC27D8243D}"
+	ProjectSection(SolutionItems) = preProject
+		images\logo.png = images\logo.png
+		index.html = index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{76322BA1-3EFB-4284-BF35-E82965543316}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLPage2.html = HTMLPage2.html
+		registration.html = registration.html
+		order.html = order.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{12812839-5AE1-49C4-9FC4-E4A879AD20FD}"
+	ProjectSection(SolutionItems) = preProject
+		Aroma_One_Website\images\1.jpg = Aroma_One_Website\images\1.jpg
+		Aroma_One_Website\images\2.jpg = Aroma_One_Website\images\2.jpg
+		Aroma_One_Website\images\3.jpg = Aroma_One_Website\images\3.jpg
+		Aroma_One_Website\images\4.jpg = Aroma_One_Website\images\4.jpg
+		Aroma_One_Website\images\5.jpg = Aroma_One_Website\images\5.jpg
+		Aroma_One_Website\images\about-icon.jpg = Aroma_One_Website\images\about-icon.jpg
+		Aroma_One_Website\images\coffeeheading.jpg = Aroma_One_Website\images\coffeeheading.jpg
+		Aroma_One_Website\images\logo.png = Aroma_One_Website\images\logo.png
+		Aroma_One_Website\images\search.jpg = Aroma_One_Website\images\search.jpg
+		Aroma_One_Website\images\search.png = Aroma_One_Website\images\search.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50F88EDA-D1F8-47A5-933E-3E1662A06181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F88EDA-D1F8-47A5-933E-3E1662A06181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F88EDA-D1F8-47A5-933E-3E1662A06181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F88EDA-D1F8-47A5-933E-3E1662A06181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76322BA1-3EFB-4284-BF35-E82965543316} = {6611B2E7-4A1F-4A60-9720-68CC27D8243D}
+		{12812839-5AE1-49C4-9FC4-E4A879AD20FD} = {6611B2E7-4A1F-4A60-9720-68CC27D8243D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6419786-2396-4D6E-AF3F-5B16212CC723}
+	EndGlobalSection
+EndGlobal

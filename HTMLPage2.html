@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma One - Premium Coffee Blends</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Helvetica', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #4a2c00;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1; /* Allow the logo to grow */
+            text-align: center; /* Center align the logo */
+        }
+
+            .logo img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto; /* Center the logo horizontally */
+            }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .account a, .cart a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .account a,
+            .cart a {
+                font-size: 14px;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 10px; /* Adjust margin for smaller screens */
+            }
+
+                nav ul li a {
+                    font-size: 16px; /* Reduce font size for smaller screens */
+                }
+        }
+
+        /* Navigation styles */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                justify-content: space-around; /* Distribute items evenly */
+            }
+
+                nav ul li {
+                    flex-grow: 1; /* Allow items to grow */
+                }
+
+                    nav ul li a {
+                        color: #4a2c00;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 2.5em; /* Approximately 40px */
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid transparent;
+                        transition: border-color 0.3s ease, color 0.3s ease;
+                        display: block;
+                    }
+
+        @media (max-width: 1200px) {
+            nav ul li a {
+                font-size: 2em; /* Approximately 32px */
+                padding-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav ul li a {
+                font-size: 1.75em; /* Approximately 28px */
+                padding-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul li a {
+                font-size: 1.5em; /* Approximately 24px */
+                padding-bottom: 5px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav ul li a {
+                font-size: 1.25em; /* Approximately 20px */
+                padding-bottom: 4px;
+            }
+        }
+
+        }
+
+        nav ul li a:hover {
+            border-bottom-color: #4a2c00; /* Color on hover */
+            color: #b8860b; /* Text color on hover (light brown) */
+        }
+
+        /* Main content section */
+        .main-content {
+            width: 100%; /* Adjust width as needed */
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .main-content p {
+                font-size: 24px; /* Increase font size for main content */
+                line-height: 1.8; /* Increase line height for better readability */
+                margin-bottom: 20px auto; /* Add spacing between paragraphs */
+            }
+
+        .section-title {
+            font-size: 30px; /* Increase font size */
+            font-weight: bold; /* Make the text bold */
+            color: #4a2c00;
+            padding: 10px 0;
+            border-bottom: 2px solid #4a2c00;
+            margin-bottom: 20px auto;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        /* Additional styles for specific section titles */
+        .section-title {
+            font-size: 28px; /* Increase font size */ /* Adjust font size for smaller screens */
+            font-weight: bold; /* Make the text bold */
+            color: #4a2c00;
+            padding: 10px 0;
+            border-bottom: 2px solid #4a2c00;
+            margin-bottom: 20px;
+        }
+
+        /* Adjust specific section titles */
+        #home .section-title {
+            font-size: 30px; /* Enlarge "Welcome to Aroma One" */
+        }
+
+        #order .section-title {
+            font-size: 30px; /* Enlarge "Order Your Favorite Blend" */
+        }
+
+        #feedback .section-title {
+            font-size: 30px; /* Enlarge "Give Us Your Feedback" */
+        }
+
+        #about .section-title {
+            font-size: 30px; /* Enlarge "About AromaOne" */
+        }
+
+        #faqs .section-title {
+            font-size: 30px; /* Enlarge "Frequently Asked Questions" */
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 18px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        /* FAQ Section styles */
+        #faqs ul {
+            font-size: 24px;
+            line-height: 1.6; /* Adjust line height for better readability */
+            max-height: auto; /* Allow the list to expand as needed */
+            overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+        }
+
+        @media (max-width: 768px) {
+            #faqs ul {
+                font-size: 18px; /* Decrease font size for smaller screens if necessary */
+            }
+        }
+
+        /* Product listing styles */
+        .product-item h3 {
+            font-size: 30px; /* Increase font size */
+            font-weight: bold; /* Make the text bold */
+            color: #4a2c00; /* Adjust text color if necessary */
+            margin-top: 10px;
+            text-align: center; /* Center align the heading */
+        }
+
+        @media (max-width: 768px) {
+            .product-item h3 {
+                font-size: 18px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        .product-item {
+            text-align: center; /* Center align content within each product item */
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+            .product-item img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                display: block;
+                margin: 0 auto; /* Center align the image */
+            }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #feedback {
+            font-size: 24px;
+            line-height: 1.6; /* Adjust line height for better readability */
+            margin-bottom: 20px; /* Add spacing at the bottom */
+        }
+
+            /* Adjust font size for submit button */
+            #feedback button {
+                font-size: 24px;
+                padding: 10px 20px; /* Add padding to the button */
+                background-color: #4a2c00; /* Match the button color with the theme */
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease; /* Smooth transition for background color */
+            }
+
+                #feedback button:hover {
+                    background-color: #b8860b; /* Darker shade on hover */
+                }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 8px 0;
+            background-color: #4a2c00;
+            color: #fff;
+            width: 100%;
+            z-index: 999; /* Ensure footer appears above other content */
+        }
+
+            footer p {
+                margin: 0;
+            }
+
+            footer a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+        @media (max-width: 768px) {
+            footer {
+                position: relative; /* Change position to relative for smaller screens */
+                bottom: auto; /* Reset bottom property */
+            }
+        }
+    </style>
+</head>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Aroma One Logo">
+    </div>
+    <div class="header-right">
+        <div class="account">
+            <a href="registration.html"><i class="fas fa-user"></i> My Account</a>
+            <a href="order.html" class="add-to-cart">Add to Cart</a>
+        </div>
+        <div class="cart">
+            <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="order.html" target="_blank">Order</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <section id="home">
+        <div class="section-title">Welcome to Aroma One</div>
+        <p>Aroma One offers a premium selection of coffee blends, from white to dark roast, ensuring a delightful coffee experience.</p>
+        <p>Explore our range of products and find your perfect cup of coffee.</p>
+    </section>
+
+
+    <section id="order">
+        <div class="section-title">Order Your Favorite Blend</div>
+
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/1.jpg" alt="Light Roast Coffee Blend">
+                <h3>Light Roast Coffee Blend</h3>
+                <p>Discover our light coffee blend, renowned for its delicate flavors like fruity, floral, or nutty notes. With a mild acidity and smooth finish, it's crafted for those who crave a gentle, refreshing coffee experience, perfect for any time of day.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/2.jpg" alt="Medium Roast Coffee Blend">
+                <h3>Medium Roast Coffee Blend</h3>
+                <p>Indulge in our medium roast coffee blend, celebrated for its balanced flavor profile. Offering a harmonious blend of rich aroma and nuanced notes, it's the perfect choice for coffee enthusiasts seeking a smooth, satisfying cup every morning.</p>
+            </div>
+            <div class="product-item">
+                <img src="images/3.jpg" alt="Dark Roast Coffee Blend">
+                <h3>Dark Roast Coffee Blend</h3>
+                <p>Discover the allure of our dark roast coffee blend, renowned for its bold and robust flavor. With deep, smoky undertones and a satisfyingly bold finish, it's crafted for those who savor the intense essence of premium coffee.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="feedback">
+        <div class="section-title">Give Us Your Feedback</div>
+        <form action="#" method="POST">
+            <label for="feedback">Your Feedback:</label><br>
+            <textarea id="feedback" rows="4" cols="50"></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <div class="section-title">About Aroma One</div>
+        <p>
+            Welcome to Aroma One Coffee Beans, where we're passionate about crafting the perfect cup from farm to brew. Nestled in the vibrant heart of New South Wales, our commitment to organic excellence starts with our meticulously sourced organic Arabica beans. Grown on sustainable farms in NSW's lush hinterlands, these beans thrive under the care of skilled farmers who uphold our values of environmental stewardship and quality.
+
+            Our roasters, masters of their craft, carefully roast each batch to bring out the distinct flavors and aromas of our coffee beans. Whether you prefer a light, medium, or dark roast, each variant is crafted with precision to deliver a unique taste experience. The light roast preserves delicate floral and fruity notes, while our medium roast strikes a perfect balance of richness and brightness. For those who savor bold flavors, our dark roast offers deep caramelized notes with a robust finish.
+
+            At Aroma One Coffee Beans, we invite you to explore our range and discover the artistry behind every cup. Join us on a journey of flavor and quality, where every sip reflects our passion for exceptional coffee.
+        </p>
+    </section>
+
+    <section id="faqs">
+        <div class="section-title">Frequently Asked Questions</div>
+        <ul>
+            <li><strong>How should I store my coffee to maintain freshness?</strong> Avoid sunlight and use airtight container preferably ceramic, glass, or stainless.</li>
+            <li><strong>How to track my order?</strong> After placing your order, you should receive an order confirmation email which includes details of your purchase and tracking number with a link.</li>
+            <li><strong>What payment methods do you accept?</strong> We accept Credit Cards, PayPal, Apple Pay, Google Pay, and Afterpay.</li>
+        </ul>
+    </section>
+</div>
+
+
+<footer>
+    <p>Connect with us:</p>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <p>&copy; 2024 AromaOne.
+</footer>
+<script>// Example JavaScript for dynamic content updates
+        // Implement your JavaScript for product filtering, cart updates, etc.
+        // Example:
+        // const products = document.querySelectorAll('.product-item');
+        // products.forEach(product => {
+        //    // Add event listeners for filtering/sorting
+        // });
+
+        // Example for cart updates
+        // const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        // addToCartButtons.forEach(button => {
+        //    button.addEventListener('click', function() {
+        //        // Update cart totals and show feedback
+        //    });
+        // });</script>

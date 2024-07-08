@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Aroma One Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4a2c00;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+            .header img {
+                max-height: 100px;
+                vertical-align: middle;
+            }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a2c00;
+        }
+
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+            .product-item img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .product-item h3 {
+                font-size: 24px;
+                color: #4a2c00;
+                margin-top: 10px;
+            }
+
+            .product-item p {
+                color: #666;
+                margin-top: 8px;
+            }
+
+            .product-item input {
+                width: 50px;
+                padding: 5px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+        .total-price {
+            font-size: 24px;
+            color: #4a2c00;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4a2c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+            .checkout-button:hover {
+                background-color: #b8860b;
+            }
+
+        .back-to-home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 16px;
+            background-color: #4a2c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+            .back-to-home:hover {
+                background-color: #b8860b;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html" class="back-to-home">Back to Home</a>
+        <img src="images/logo.png" alt="Aroma One Coffee Logo">
+    </div>
+    <div class="container">
+        <h1>Order Your Favorite Blend</h1>
+        <div class="product-item">
+            <img src="images/1.jpg" alt="Light Roast Coffee Blend">
+            <h3>Light Roast Coffee Blend</h3>
+            <p>Discover our light coffee blend, renowned for its delicate flavors like fruity, floral, or nutty notes. With a mild acidity and smooth finish, it's crafted for those who crave a gentle, refreshing coffee experience, perfect for any time of day.</p>
+            <p>Price: AUD 20/kg</p>
+            <input type="number" id="light-qty" placeholder="Qty" min="0" oninput="calculateTotal()">
+        </div>
+        <div class="product-item">
+            <img src="images/2.jpg" alt="Medium Roast Coffee Blend">
+            <h3>Medium Roast Coffee Blend</h3>
+            <p>Indulge in our medium roast coffee blend, celebrated for its balanced flavor profile. Offering a harmonious blend of rich aroma and nuanced notes, it's the perfect choice for coffee enthusiasts seeking a smooth, satisfying cup every morning.</p>
+            <p>Price: AUD 25/kg</p>
+            <input type="number" id="medium-qty" placeholder="Qty" min="0" oninput="calculateTotal()">
+        </div>
+        <div class="product-item">
+            <img src="images/3.jpg" alt="Dark Roast Coffee Blend">
+            <h3>Dark Roast Coffee Blend</h3>
+            <p>Discover the allure of our dark roast coffee blend, renowned for its bold and robust flavor. With deep, smoky undertones and a satisfyingly bold finish, it's crafted for those who savor the intense essence of premium coffee.</p>
+            <p>Price: AUD 30/kg</p>
+            <input type="number" id="dark-qty" placeholder="Qty" min="0" oninput="calculateTotal()">
+        </div>
+        <div class="total-price">
+            Total Price: AUD <span id="total-price">0.00</span>
+        </div>
+        <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const lightQty = document.getElementById('light-qty').value || 0;
+            const mediumQty = document.getElementById('medium-qty').value || 0;
+            const darkQty = document.getElementById('dark-qty').value || 0;
+
+            const lightPrice = 20;
+            const mediumPrice = 25;
+            const darkPrice = 30;
+
+            const totalPrice = (lightQty * lightPrice) + (mediumQty * mediumPrice) + (darkQty * darkPrice);
+            document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

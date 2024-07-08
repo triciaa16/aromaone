@@ -1,0 +1,11 @@
+@Aroma_One_Website_HostAddress = http://localhost:5152
+
+GET {{Aroma_One_Website_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{Aroma_One_Website_HostAddress}}/todos/1
+Accept: application/json
+
+###
